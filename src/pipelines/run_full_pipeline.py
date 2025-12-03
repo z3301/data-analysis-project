@@ -19,8 +19,8 @@ import sys
 import os
 from datetime import datetime, timedelta
 
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+# Add src to path (parent of pipelines directory)
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 print("=" * 80)
 print("WAHOO BAY WATER QUALITY PREDICTION - FULL PIPELINE")

@@ -21,8 +21,8 @@ from datetime import datetime
 import warnings
 warnings.filterwarnings('ignore')
 
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+# Add src to path (parent of pipelines directory)
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pandas as pd
 import numpy as np

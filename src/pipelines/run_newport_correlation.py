@@ -10,6 +10,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+# Get project root (two levels up from src/pipelines)
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 
 def run_correlation_analysis():
     """Run correlation analysis on Newport Pier data."""
@@ -19,7 +22,7 @@ def run_correlation_analysis():
     print("=" * 70)
 
     # Load the featured dataset
-    data_path = Path("data/processed/newport_featured_dataset.csv")
+    data_path = PROJECT_ROOT / "data/processed/newport_featured_dataset.csv"
     print(f"\nLoading: {data_path}")
 
     df = pd.read_csv(data_path)

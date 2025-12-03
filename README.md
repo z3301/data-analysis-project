@@ -89,7 +89,6 @@ Tide predictions were obtained from NOAA Center for Operational Oceanographic Pr
 ```text
 data-analysis-project/
 ├── README.md
-├── PAPER_SECTIONS_CALIFORNIA.md      # Paper sections for submission
 ├── requirements.txt
 ├── notebooks/
 │   └── California_Coastal_Water_Quality_Analysis.ipynb
@@ -98,6 +97,10 @@ data-analysis-project/
 │   ├── real/                         # Downloaded sensor data
 │   └── processed/                    # Featured datasets (.csv.gz)
 └── src/
+    ├── pipelines/
+    │   ├── run_mlml_pipeline.py      # MLML analysis pipeline
+    │   ├── run_scripps_pipeline.py   # Scripps analysis pipeline
+    │   └── run_newport_pipeline.py   # Newport analysis pipeline
     ├── data_collection/
     │   ├── mlml_data_loader.py       # MLML Monterey Bay
     │   ├── scripps_data_loader.py    # Scripps Pier
@@ -172,9 +175,9 @@ jupyter notebook notebooks/California_Coastal_Water_Quality_Analysis.ipynb
 
 ```bash
 # Run site-specific pipelines
-python run_mlml_pipeline.py
-python run_scripps_pipeline.py
-python run_newport_pipeline.py
+python src/pipelines/run_mlml_pipeline.py
+python src/pipelines/run_scripps_pipeline.py
+python src/pipelines/run_newport_pipeline.py
 ```
 
 ---

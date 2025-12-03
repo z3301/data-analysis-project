@@ -18,8 +18,8 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
-# Add src to path
-sys.path.insert(0, 'src')
+# Add src to path (parent of pipelines directory)
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pandas as pd
 import numpy as np
